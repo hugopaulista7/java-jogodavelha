@@ -211,14 +211,7 @@ class Main {
         player2.setName(scan.nextLine());
 
         System.out.println("This is the game board format: ");
-        for (int i = 0; i < 9; i++) {
-            if (i % 3 != 0) {
-                System.out.printf("%d ", i + 1);
-            } else {
-                System.out.printf("\n%d ", i + 1);
-
-            }
-        }
+        board.ShowBoard();
         System.out.println("\n" + player1.getName() + ", please choose what character will represent you\n X or O available");
         
         player1.setChoosen(main.ValidateChar());

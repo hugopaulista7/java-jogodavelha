@@ -30,7 +30,7 @@ class Player {
         this.name = name;
     }
 
-    public void setChoosen(char choosen) {
+    public void setChosen(char choosen) {
         this.choosenCharacter = choosen;
     }
 }
@@ -214,7 +214,7 @@ class Main {
         board.ShowBoard();
         System.out.println("\n" + player1.getName() + ", please choose what character will represent you\n X or O available");
         
-        player1.setChoosen(main.ValidateChar());
+        player1.setChosen(main.ValidateChar());
 
         boolean valid = false;
        
@@ -222,7 +222,7 @@ class Main {
             System.out.println("\n" + player2.getName() +", please choose what character will represent you\n X or O available");
             char c = main.ValidateChar();
             if (c != player1.getChoosen()) {
-                player2.setChoosen(c);
+                player2.setChosen(c);
                 valid = true;
             } else {
                 System.out.println("The character must be different from Player 1");
